@@ -6,7 +6,11 @@ page = Blueprint('page', __name__, template_folder='templates')
 def home():
 	return render_template('page/home.html')
 
-@page.route('/privacy')
+@page.route('/privacy.html')
 def privacy():
 	return render_template('page/privacy.html')
+
+@page.route('/terms.html')
+def terms():
+	return render_template('page/terms.html')
 
