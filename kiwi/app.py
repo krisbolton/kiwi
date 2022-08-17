@@ -20,4 +20,3 @@ def create_app(settings_override=None):
     app.register_blueprint(page)
 
     return app
-
