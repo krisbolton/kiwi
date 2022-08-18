@@ -1,6 +1,8 @@
 from flask import Flask
 
 from kiwi.blueprints.page import page
+from kiwi.extensions import debug_toolbar
+
 
 def create_app(settings_override=None):
     """
@@ -20,3 +22,16 @@ def create_app(settings_override=None):
     app.register_blueprint(page)
 
     return app
+
+
+def extensions(app):
+	"""
+	Register extensions.
+	
+	:param app: Flask application instance.
+	:return: None
+	"""
+	debug_toolbar.init_app(app)
+	
+	return None
+
