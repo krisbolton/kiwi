@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        kiwi=cli.cli:cli
+    
