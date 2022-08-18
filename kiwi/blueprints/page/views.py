@@ -21,3 +21,19 @@ def terms():
 @page.route('/contact.html')
 def contact():
 	return render_template('page/contact.html')
+
+
+@page.route('/courses.html')
+def courses():
+	return render_template('page/courses.html')
+
+
+@page.route('/library.html')
+def library():
+	return render_template('page/library.html')
+
+
+@page.route('/community.html')
+def community():
+	return render_template('page/community.html')
+
