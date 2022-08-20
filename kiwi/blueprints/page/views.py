@@ -17,12 +17,6 @@ def privacy():
 def terms():
 	return render_template('page/terms.html')
 
-
-@page.route('/contact.html')
-def contact():
-	return render_template('page/contact.html')
-
-
 @page.route('/courses.html')
 def courses():
 	return render_template('page/courses.html')
