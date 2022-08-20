@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 from kiwi.blueprints.page import page
 from kiwi.extensions import debug_toolbar
@@ -19,6 +19,7 @@ def create_app(settings_override=None):
     if settings_override:
         app.config.update(settings_override)
 
+    error_templates(app)
     app.register_blueprint(page)
 
     return app
@@ -35,3 +36,28 @@ def extensions(app):
 	
 	return None
 
+
+def error_templates(app):
+    """
+    Register error pages
+
+    :param app: Flask app instance
+    :return: None
+    """
+
+    def render_status(status):
+        """
+         Render a template for specific status
+
+         :param status: Status
+         :type status: str
+         :return: None
+         """
+
+        code = getattr(status, 'code', 500)
+        return render_template('errors/{0}.html'.format(code)), code
+
+    for error in [404, 500]:
+        app.errorhandler(error)(render_status)
+
+    return None
