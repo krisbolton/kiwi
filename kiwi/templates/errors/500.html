@@ -1,8 +1,11 @@
-{% extends 'layouts/app.html' %}
+{% extends 'layouts/error.html' %}
 
-{% block title %}Error 500{% endblock %}
+{% block title %}Error 500: Internal Server Error{% endblock %}
 
 {% block body %}
-    <h2>Error 500</h2>
-    <p>An internal server error has occured.</p>
+    <div class="col layer-2">
+            <h2 class="h1">Internal server error</h2>
+            <div class="lead mb-4">There was a problem on our end. This should be fixed shortly.</div>
+            <a class="btn btn-primary btn-lg" href="/">Go home and try again</a>
+  </div>
 {% endblock %}

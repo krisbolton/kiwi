@@ -1,8 +1,11 @@
-{% extends 'layouts/app.html' %}
+{% extends 'layouts/error.html' %}
 
-{% block title %}Error 404{% endblock %}
+{% block title %}Error 404: Page Not Found{% endblock %}
 
 {% block body %}
-    <h2>Error 404</h2>
-  <p>Page not fonud.</p>
+  <div class="col layer-2">
+            <h2 class="h1">Page not found</h2>
+            <div class="lead mb-4">The page you are looking for could not be found.</div>
+            <a class="btn btn-primary btn-lg" href="/">Go back to home</a>
+  </div>
 {% endblock %}

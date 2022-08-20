@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='styles/loaders/loader-typing.css') }}" rel="stylesheet" type="text/css" media="all" >
+    <link href="{{ url_for('static', filename='styles/theme-course.css') }}" rel="stylesheet" type="text/css" media="all" >
+    <link rel="preload" as="font" href="{{ url_for('static', filename='fonts/Inter-UI-upright.var.woff2') }}" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="{{ url_for('static', filename='fonts/Inter-UI.var.woff2') }}" type="font/woff2" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="loader">
+      <div class="loading-animation"></div>
+    </div>
+
+    <section class="min-vh-100 bg-primary-3 text-light py-5 o-hidden">
+      <div class="container">
+        <div class="row justify-content-center mb-md-6">
+          <div class="col-auto">
+            <a href="/">
+              <h1>Security Kiwi</h1>
+            </a>
+          </div>
+        </div>
+        <div class="row text-center py-6">
+        {% block body %}{% endblock %}
+        </div>
+      </div>
+      <div class="decoration-wrapper d-none d-md-block">
+        <div class="decoration right middle-y scale-2" data-jarallax-element="200">
+          <img class="bg-primary-2" src="assets/img/decorations/deco-blob-3.svg" alt="deco-blob-3 decoration" data-inject-svg />
+        </div>
+        <div class="decoration right middle-y" data-jarallax-element="100">
+          <img class="bg-primary" src="assets/img/decorations/deco-lines-3.svg" alt="deco-lines-3 decoration" data-inject-svg />
+        </div>
+        <div class="decoration top left scale-3" data-jarallax-element="50">
+          <img class="bg-white" src="assets/img/decorations/deco-blob-9.svg" alt="deco-blob-9 decoration" data-inject-svg />
+        </div>
+        <div class="decoration top left scale-2 scale-3 blend-mode-multiply" data-jarallax-element="150 50">
+          <img class="bg-primary-2" src="assets/img/decorations/deco-dots-2.svg" alt="deco-dots-2 decoration" data-inject-svg />
+        </div>
+      </div>
+    </section>
+
+    <!-- Required vendor scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
+    <!-- Removes page load animation when window is finished loading -->
+    <script type="text/javascript">
+      window.addEventListener("load", function () {    document.querySelector('body').classList.add('loaded');  });
+    </script>
+
+  </body>
+
+</html>
