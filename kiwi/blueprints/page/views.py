@@ -31,3 +31,6 @@ def library():
 def community():
 	return render_template('page/community.html')
 
+@page.route('/courses/machine-learning-for-security.html')
+def mlsec():
+	return render_template('page/machine-learning-for-security.html')
