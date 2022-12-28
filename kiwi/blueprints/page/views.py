@@ -35,9 +35,9 @@ def community():
 def mlsec():
 	return render_template('page/machine-learning-for-security.html')
 
-@page.route('/courses/python-data-wrangling-for-security.html')
+@page.route('/courses/data-wrangling-for-security.html')
 def pywrangling():
-	return render_template('page/python-data-wrangling-for-security.html')
+	return render_template('page/data-wrangling-for-security.html')
 
 @page.route('/courses/cyber-warfare-explained.html')
 def warexplained():
