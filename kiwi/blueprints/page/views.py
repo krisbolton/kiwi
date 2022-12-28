@@ -34,3 +34,11 @@ def community():
 @page.route('/courses/machine-learning-for-security.html')
 def mlsec():
 	return render_template('page/machine-learning-for-security.html')
+
+@page.route('/courses/python-data-wrangling-for-security.html')
+def pywrangling():
+	return render_template('page/python-data-wrangling-for-security.html')
+
+@page.route('/courses/cyber-warfare-explained.html')
+def warexplained():
+	return render_template('page/cyber-warfare-explained.html')
