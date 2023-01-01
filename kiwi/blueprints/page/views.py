@@ -33,9 +33,9 @@ def community():
 	return render_template('page/community.html')
 
 
-@page.route('/courses/machine-learning-for-security.html')
+@page.route('/courses/machine-learning-foundations.html')
 def mlsec():
-	return render_template('page/machine-learning-for-security.html')
+	return render_template('page/machine-learning-foundations.html')
 
 
 @page.route('/courses/data-wrangling-for-security.html')
@@ -49,11 +49,11 @@ def warexplained():
 
 
 """ 
-Course: Machine Learning for Security
+Course: Machine Learning Foundations
 """
 
 
-@page.route('/courses/machine-learning-for-security/introduction-to-ml.html')
+@page.route('/courses/machine-learning-foundations/introduction-to-ml.html')
 def introml():
 	return render_template('page/introduction-to-ml.html')
 
