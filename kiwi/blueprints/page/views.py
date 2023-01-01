@@ -61,6 +61,11 @@ def softskills():
 	return render_template('page/soft-skills.html')
 
 
+@page.route('/courses/jupyter-notebooks-for-security.html')
+def jupytersec():
+	return render_template('page/jupyter-notebooks-for-security.html')
+
+
 """ 
 Course: Machine Learning Foundations
 """
