@@ -56,3 +56,8 @@ Course: Machine Learning for Security
 @page.route('/courses/machine-learning-for-security/introduction-to-ml.html')
 def introml():
 	return render_template('page/introduction-to-ml.html')
+
+
+@page.route('/courses/soft-skills.html')
+def softskills():
+	return render_template('page/soft-skills.html')
