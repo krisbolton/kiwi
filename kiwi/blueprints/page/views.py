@@ -66,6 +66,16 @@ def jupytersec():
 	return render_template('page/jupyter-notebooks-for-security.html')
 
 
+@page.route('/courses/soft-skills/how-to-approach-learning.html')
+def learning():
+	return render_template('page/how-to-approach-learning.html')
+
+
+@page.route('/courses/soft-skills/how-to-conduct-research.html')
+def research():
+	return render_template('page/how-to-conduct-research.html')
+
+
 """ 
 Course: Machine Learning Foundations
 """
